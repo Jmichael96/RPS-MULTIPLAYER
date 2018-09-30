@@ -1,0 +1,152 @@
+body {
+	background-color: #00a4a4;
+	background-image: linear-gradient(137deg, #00a4a4 0%, #921f1f 31%, #375ce2 84%, #130958 97%);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+#head{
+	color:white;
+}
+/* name input and button */
+#name-form{
+	margin: 10px;
+}
+#name-input {
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 17px;
+  font-size: bolder;
+}
+
+#name-input:focus {
+	color: black;
+	background-color: rgb(255, 255, 255);
+	font-weight: bolder;
+	font-size: 17px;	
+}
+
+#add-name-button {
+	border-radius: 4px;
+	background-color: #21D4FD;
+	background-image: linear-gradient(346deg, #21D4FD 0%, #B721FF 100%);	
+}
+#add-name-button:hover{
+	background-color: #21D4FD;
+	background-image: linear-gradient(346deg, #21D4FD 0%, #B721FF 70%);	
+}
+/* end */
+/* whole panel of player activity */
+.playerPanel {
+	border-radius: 10px;
+}
+
+.playerPanelTurn {
+	border: 5px solid #27CC73;
+}
+
+.panelName {
+	background-color: #666666;
+	background-image: linear-gradient(0deg, #666666 40%, #940000 100%);
+	text-align: center;
+	font-weight: bold;
+	color: #000;
+	border-radius: 5px;
+}
+
+.playerPanel .panelOption {
+	padding: 12px;
+	background-color: rgba(30, 115, 226, 0.616);
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: #000;
+	margin: 2px;
+	border-radius: 5px;
+}
+
+
+.panelOption:hover {
+	background-color: #074ba5;
+}
+
+.panelStats {
+	text-align: center;
+	font-size: 30px;
+	background-color: rgb(104, 104, 104, .7);
+	color: #fff;
+	border-radius: 5px;
+}
+
+.gamePanel {
+	background-color: rgba(128, 128, 128, 0.596);
+	border-radius: 5px;
+}
+/* end */
+/* center display of game play */
+#waitingNotice {
+	font-size: 20px;
+}
+#round-notice{
+	font-size: 24px;
+}
+/* end */
+/* game chat */
+#chat-display {
+	text-align: left;
+  	border-radius: 10px;
+	background-color: #cdd9ea;
+	width: 500px;
+	height: 100px;
+}
+.card{
+	background-color: #666666;
+	background-image: linear-gradient(0deg, #666666 40%, #940000 100%);
+	margin: 4px;
+}
+.chatLabel {
+	font-size: 1.5em;
+	color: #b03138;
+	text-align: center;
+	font-weight: bold;
+}
+#chat-input {
+	color: #b4c7df;
+	text-align: center;
+	background-color: #cdd9ea;
+}
+#chat-input:focus {
+	color: #084596;
+	background-color: white;
+}
+
+#chat-button {
+	background-color: #52ACFF;
+	background-image: linear-gradient(180deg, #52ACFF 25%, #ff2c2f 80%);
+	color: #fff;
+}
+#chat-button:hover{
+	background-color: #52ACFF;
+	background-image: linear-gradient(180deg, #52ACFF 25%, #ff2c2f 50%);
+
+}
+/* end */
+.chatColor1 {
+	color: #ff01c0;
+}
+
+.chatColor2 {
+	color: #0052bd;
+}
+
+.chatColorDisconnected {
+	color: #fa0000;
+	font-style: italic;
+}
+
+.chatColorJoined {
+	color: #27CC73;
+	font-style: italic;
+}

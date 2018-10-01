@@ -28,11 +28,6 @@ var player2Choice = "";
 // Who's turn is it
 var turn = 1;
 
-/*
-//
-//  Firebase Database Section
-//
-*/
 
 // Get a reference to the database service
 var database = firebase.database();
@@ -178,11 +173,6 @@ database.ref("/outcome/").on("value", function(snapshot) {
 	$("#round-notice").html(snapshot.val());
 });
 
-/*
-//
-//  Button Events Section
-//
-*/
 
 // Attach an event handler to the "Submit" button to add a new user to the database
 $("#add-name-button").on("click", function(event) {

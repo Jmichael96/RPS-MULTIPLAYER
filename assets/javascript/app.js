@@ -1,5 +1,5 @@
- // Initialize Firebase
-  var config = {
+// Initialize Firebase
+var config = {
     apiKey: "AIzaSyAz_A9Wf6__tScE-4jt5H2_2KrHyM9kVio",
     authDomain: "rps-multiplayer-fb8da.firebaseapp.com",
     databaseURL: "https://rps-multiplayer-fb8da.firebaseio.com",

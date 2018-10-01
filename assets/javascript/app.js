@@ -32,6 +32,11 @@ var turn = 1;
 // Get a reference to the database service
 var database = firebase.database();
 
+// sound for click events
+var clickSound = new Audio("./assets/sounds/lazer.mp3");
+var messageSend = new Audio("./assets/sounds/scissormessage.mp3");
+var addPlayer = new Audio("./assets/sounds/addedPlayer.mp3");
+
 // Attach a listener to the database /players/ node to listen for any changes
 database.ref("/players/").on("value", function(snapshot) {
 	// Check for existence of player 1 in the database
@@ -177,7 +182,7 @@ database.ref("/outcome/").on("value", function(snapshot) {
 // Attach an event handler to the "Submit" button to add a new user to the database
 $("#add-name-button").on("click", function(event) {
 	event.preventDefault();
-
+	addPlayer.play();
 	// First, make sure that the name field is non-empty and we are still waiting for a player
 	if ( ($("#name-input").val().trim() !== "") && !(player1 && player2) ) {
 		// Adding player1
@@ -240,7 +245,7 @@ $("#add-name-button").on("click", function(event) {
 // Attach an event handler to the chat "Send" button to append the new message to the conversation
 $("#chat-button").on("click", function(event) {
 	event.preventDefault();
-
+	messageSend.play();
 	// First, make sure that the player exists and the message box is non-empty
 	if ( (yourPlayerName !== "") && ($("#chat-input").val().trim() !== "") ) {
 		// Grab the message from the input box and subsequently reset the input box
@@ -258,7 +263,7 @@ $("#chat-button").on("click", function(event) {
 // Monitor Player1's selection
 $("#playerPanel1").on("click", ".panelOption", function(event) {
 	event.preventDefault();
-
+	clickSound.play();
 	// Make selections only when both players are in the game
 	if (player1 && player2 && (yourPlayerName === player1.name) && (turn === 1) ) {
 		// Record player1's choice
@@ -277,7 +282,7 @@ $("#playerPanel1").on("click", ".panelOption", function(event) {
 // Monitor Player2's selection
 $("#playerPanel2").on("click", ".panelOption", function(event) {
 	event.preventDefault();
-
+	clickSound.play();
 	// Make selections only when both players are in the game
 	if (player1 && player2 && (yourPlayerName === player2.name) && (turn === 2) ) {
 		// Record player2's choice

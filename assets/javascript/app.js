@@ -64,7 +64,7 @@ database.ref("/players/").on("value", function(snapshot) {
 		$("#round-notice").html("RPS");
 		$("#waitingNotice").html("");
 		$("#player1Stats").html("Win: 0, Loss: 0, Tie: 0");
-	}
+	};
 
 	// Check for existence of player 2 in the database
 	if (snapshot.child("player2").exists()) {
@@ -91,7 +91,7 @@ database.ref("/players/").on("value", function(snapshot) {
 		$("#round-notice").html("RPS");
 		$("#waitingNotice").html("");
 		$("#player2Stats").html("Win: 0, Loss: 0, Tie: 0");
-	}
+	};
 
 	// If both players are now present, it's player1's turn
 	if (player1 && player2) {
@@ -100,7 +100,7 @@ database.ref("/players/").on("value", function(snapshot) {
 
 		// Update the center display
 		$("#waitingNotice").html("Waiting on " + player1Name + " to choose...");
-	}
+	};
 
 	// If both players leave the game, empty the chat session
 	if (!player1 && !player2) {
@@ -113,7 +113,7 @@ database.ref("/players/").on("value", function(snapshot) {
 		$("#playerPanel2").removeClass("playerPanelTurn");
 		$("#round-notice").html("RPS");
 		$("#waitingNotice").html("");
-	}
+	};
 });
 
 // Attach a listener that detects user disconnection events
@@ -141,7 +141,7 @@ database.ref("/chat/").on("child_added", function(snapshot) {
 		chatEntry.addClass("chatColor1");
 	} else {
 		chatEntry.addClass("chatColor2");
-	}
+	};
 
 	$("#chat-display").append(chatEntry);
 	$("#chat-display").scrollTop($("#chat-display")[0].scrollHeight);
@@ -169,8 +169,8 @@ database.ref("/turn/").on("value", function(snapshot) {
 			$("#playerPanel1").removeClass("playerPanelTurn");
 			$("#playerPanel2").addClass("playerPanelTurn");
 			$("#waitingNotice").html("Waiting on " + player2Name + " to choose");
-		}
-	}
+		};
+	};
 });
 
 // Attach a listener to the database /outcome/ node to be notified of the game outcome
@@ -225,7 +225,7 @@ $("#add-name-button").on("click", function(event) {
 
 			// If this user disconnects by closing or refreshing the browser, remove the user from the database
 			database.ref("/players/player2").onDisconnect().remove();
-		}
+		};
 
 		// Add a user joining message to the chat
 		var msg = yourPlayerName + " has joined!";
@@ -239,7 +239,7 @@ $("#add-name-button").on("click", function(event) {
 
 		// Reset the name input box
 		$("#name-input").val("");	
-	}
+	};
 });
 
 // Attach an event handler to the chat "Send" button to append the new message to the conversation
@@ -257,7 +257,7 @@ $("#chat-button").on("click", function(event) {
 
 		// Save the new chat entry
 		database.ref("/chat/" + chatKey).set(msg);
-	}
+	};
 });
 
 // Monitor Player1's selection
@@ -276,7 +276,7 @@ $("#playerPanel1").on("click", ".panelOption", function(event) {
 		// Set the turn value to 2, as it is now player2's turn
 		turn = 2;
 		database.ref().child("/turn").set(2);
-	}
+	};
 });
 
 // Monitor Player2's selection
@@ -294,7 +294,7 @@ $("#playerPanel2").on("click", ".panelOption", function(event) {
 
 		// Compare player1 and player 2 choices and record the outcome
 		rpsCompare();
-	}
+	};
 });
 
 // rpsCompare is the main rock/paper/scissors logic to see which player wins
@@ -369,9 +369,9 @@ function rpsCompare() {
 			database.ref().child("/outcome/").set("Tie game!");
 			database.ref().child("/players/player1/tie").set(player1.tie + 1);
 			database.ref().child("/players/player2/tie").set(player2.tie + 1);
-		}
+		};
 
-	}
+	};
 
 	// Set the turn value to 1, as it is now player1's turn
 	turn = 1;

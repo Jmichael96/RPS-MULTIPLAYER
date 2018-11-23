@@ -15,6 +15,7 @@
 - HTML5 
 - Bootstrap 
 - CSS 
+![trivia](https://user-images.githubusercontent.com/40511023/48927727-2ce13400-ee9e-11e8-90fd-ffb11f11178e.PNG)
 
 
 ## RULES:

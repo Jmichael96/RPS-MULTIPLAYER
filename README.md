@@ -8,6 +8,8 @@
   is stored until the user leaves the page. The wins, losses and ties are also stored in firebase until the user exits the web page.
   JQuery is used to render all the information that the user selects or inputs to the html along with initiating functions.
   
+![RPS](https://user-images.githubusercontent.com/40511023/55295427-84565a00-53d2-11e9-8c7a-508bdbdde3f2.gif)
+
 ## LANGUAGES/LIBRARIES USED 
 - Firebase
 - JavaScript 

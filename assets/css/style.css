@@ -1,154 +1,206 @@
 /* whole body style and background */
 body {
-	background-color: #00a4a4;
-	background-image: linear-gradient(137deg, #00a4a4 0%, #921f1f 31%, #375ce2 84%, #130958 97%);
+	background-image: url("../images/metal.jpg");
 	background-size: cover;
-    	background-repeat: no-repeat;
-    	background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 	background-position: center;
-	font-family: 'Alike Angular', serif;
 }
-
 /* header style */
 h1{
-	color:white;
-	font-size: 55px;
-	font-family: 'Graduate', cursive;
+	color: rgb(255, 102, 0);
+	font-weight: 800;
+	font-size: 80px;
+	text-shadow: 0 2px 5px black, 0 2px 8px black;
 }
-h3{
-	color:white;
-	font-size: 45px;
-	font-family: 'Graduate', cursive;
-}
-
 /* name input and button */
 #name-form{
-	margin: 10px;
+	margin: 50px 0 50px 0;
 }
+/* style of the input box */
 #name-input {
   color: #fff;
   text-align: center;
   border-radius: 3px;
   font-size: 17px;
-  font-size: bolder;
+	font-size: bolder;
+	background-color: black;
+	border: 1px dotted rgb(255, 102, 0);
 }
 #name-input:focus {
-	color: black;
-	background-color: rgb(255, 255, 255);
+	color: white;
+	background-color: rgb(0, 0, 0);
 	font-weight: bolder;
 	font-size: 17px;	
+	box-shadow: 0 2px 10px rgb(255, 102, 0),
+	0 2px 20px rgb(255, 102, 0);
+	border: none;
 }
+#name-input:active {
+	box-shadow: 0 1px 10px rgb(255, 102, 0),
+	0 1px 15px rgb(255, 102, 0),
+	0 1px 20px rgb(255, 102, 0);
+	border: none;
+	background-color: black;
+}
+/* end input box style */
+/* style of submit button */
 #add-name-button {
 	border-radius: 4px;
-	background-color: #21D4FD;
-	background-image: linear-gradient(346deg, #21D4FD 0%, #B721FF 100%);	
+	background-color: rgb(255, 102, 0);
+	border: 1px solid black;
+	font-size: 25px;
+	font-weight: 400;
+	box-shadow: 0 2px 10px black, 0 2px 20px black;
+	-webkit-transition: background-color .5s ease-out;
+	-moz-transition: background-color .5s ease-out;
+	-o-transition: background-color .5s ease-out;
+	transition: background-color .5s ease-out;  
 }
 #add-name-button:hover{
-	background-color: #21D4FD;
-	background-image: linear-gradient(346deg, #21D4FD 0%, #B721FF 70%);	
+	background-color: rgb(0, 119, 255);
 }
-/* end */
-
-/* whole panel of player activity */
-.playerPanel {
-	border-radius: 10px;
-}
+/* end submit button*/
+/* showing the users' whose turn it is  */
 .playerPanelTurn {
-	border: 5px solid #27CC73;
+	border: 2px solid rgb(0, 119, 255);
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgb(0, 119, 255),
+	0 0 20px rgb(0, 119, 255),
+	0 0 30px rgb(0, 119, 255),
+	0 0 40px rgb(0, 119, 255);
 }
+/* users name and background style */
 .panelName {
-	background-color: #666666;
-	background-image: linear-gradient(0deg, #666666 40%, #940000 100%);
-	text-align: center;
-	font-weight: bold;
-	color: #000;
+	background-color: #000000;
+	font-size: 35px;
+	padding: 10px 0px 5px 0px;
+	font-weight: 600;
+	color: rgb(255, 102, 0);
 	border-radius: 5px;
+	box-shadow: 0 2px 10px black, 0 2px 20px black;
 }
+/* style of the players selection (Rock Paper Scissors) */
 .playerPanel .panelOption {
 	padding: 12px;
-	background-color: rgba(30, 115, 226, 0.616);
+	background-color: rgba(0, 0, 0, 0.616);
 	text-align: center;
 	font-size: 20px;
-	font-weight: bold;
-	color: #000;
-	margin: 2px;
+	font-weight: 600;
+	color: white;
+	margin: 20px 0 10px 0;
+	box-shadow: 0 2px 10px black, 0 2px 20px black;
 	border-radius: 5px;
+	border: 1px dotted rgb(255, 102, 0);
+	-webkit-transition: background-color .5s ease-out;
+	-moz-transition: background-color .5s ease-out;
+	-o-transition: background-color .5s ease-out;
+	transition: background-color .5s ease-out; 
 }
 .panelOption:hover {
-	background-color: #074ba5;
+	background-color: rgb(255, 102, 0);
+	color: black;
+	cursor: pointer;
 }
+/* end of style */
+/* style of stats board players */
 .panelStats {
 	text-align: center;
 	font-size: 30px;
-	background-color: rgb(104, 104, 104, .7);
+	background-color: rgb(0, 119, 255);
 	color: #fff;
 	border-radius: 5px;
+	box-shadow: 0 2px 10px black,
+	0 2px 20px black;
+	font-weight: 700;
+	text-shadow: 0 1px 4px black;
 }
+/* style of game panel displaying the games stats */
 .gamePanel {
-	background-color: rgba(128, 128, 128, 0.596);
+	background-color: rgb(255, 102, 0);
 	border-radius: 5px;
+	box-shadow: 0 2px 10px black,
+	0 2px 20px black;
+	color: black;
+	font-weight: 600;
+	font-size: 25px;
 }
 /* end */
-
 /* center display of game play */
 #waitingNotice {
 	font-size: 20px;
+	font-weight: 500;
 }
 #round-notice{
 	font-size: 24px;
+	font-weight: 500;
 }
 /* end */
-
 /* game chat */
-#chat-display {
-	text-align: left;
-  	border-radius: 10px;
-	background-color: #cdd9ea;
-}
+/* background of chat input box */
 .card{
-	background-color: #666666;
-	background-image: linear-gradient(0deg, #666666 40%, #940000 100%);
-	margin: 4px;
+	background-color: rgb(255, 102, 0);
+	border-radius: 10px;
+	box-shadow: 0 2px 10px black,
+	0 2px 20px black;
+	margin: 10px;
 }
-.chatLabel {
-	font-size: 1.5em;
-	color: #b03138;
-	text-align: center;
-	font-weight: bold;
-}
+/* style of input for sending chat */
 #chat-input {
-	color: #b4c7df;
+	color: #ffffff;
 	text-align: center;
-	background-color: #cdd9ea;
+	background-color: #000000;
+	border: 1px solid black;
+	width: 400px;
+	border-radius: 2px;
+	box-shadow: 0 2px 10px black;
 }
 #chat-input:focus {
-	color: #084596;
-	background-color: white;
+	color: #ffffff;
+	background-color: rgb(0, 0, 0);
+	border: none;
 }
-
+#chat-input:active {
+	border: 1px dotted rgb(255, 102, 0);
+}
+/* submit chat button */
 #chat-button {
-	background-color: #52ACFF;
-	background-image: linear-gradient(180deg, #52ACFF 25%, #ff2c2f 80%);
+	background-color: rgb(0, 0, 0);
 	color: #fff;
+	border-radius: 8px;
+	border: 1px solid rgb(255, 102, 0);
 }
 #chat-button:hover{
-	background-color: #52ACFF;
-	background-image: linear-gradient(180deg, #52ACFF 25%, #ff2c2f 50%);
-
+	box-shadow: 0 2px 10px black,
+	0 2px 20px black;
 }
 /* end */
-
+/* rendered data of chat box */
+#chat-display {
+  border-radius: 10px;
+	background-color: #ffffff;
+	width: 500px;
+	box-shadow: 0 2px 10px black,
+	0 2px 20px black;
+}
+/* chat color of player one */
 .chatColor1 {
-	color: #1a67cc;
+	color: rgb(0, 119, 255);
 }
+/* chat color of player two */
 .chatColor2 {
-	color: #1a67cc;
+	color: #ff00bf;
 }
+/* disconnected chat style */
 .chatColorDisconnected {
-	color: #fa0000;
+	color: #000000;
 	font-style: italic;
+	font-weight: 800;
 }
+/* player joined chat style */
 .chatColorJoined {
-	color: #27CC73;
+	color: rgb(255, 102, 0);
 	font-style: italic;
+	font-size: 21px;
+	font-weight: 500;
 }
